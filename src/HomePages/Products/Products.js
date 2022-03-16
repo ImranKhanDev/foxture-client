@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 import pd1 from "../../images/pd-1.png";
 import pd2 from "../../images/pd-2.png";
 import pd3 from "../../images/pd-3.png";
@@ -14,7 +14,7 @@ const products = [
   {
     img: pd1,
     review: "32 reviews",
-    title: "Pendent light roof minimal",
+    title: "Pendent roof minimal",
     price: " $55.00",
   },
 
@@ -28,7 +28,7 @@ const products = [
   {
     img: pd4,
     review: "32 reviews",
-    title: "Pendent light roof minimal",
+    title: "Pendent  roof minimal",
     price: " $55.00",
   },
   {
@@ -59,13 +59,15 @@ const products = [
 const Products = () => {
   return (
     <Container>
-      <h2>Best Products : {products.length} </h2>
+      <h2>Best Products </h2>
 
-      {products.map((product) => {
-        <Product  product={product}></Product>;
-      })}
+      <Row xs={12} md={4} sm={6} className="g-4">
+        {products?.map((product) => (
+          <Product product={product}></Product>
+        ))}
+      </Row>
     </Container>
   );
 };
-//  er
+
 export default Products;

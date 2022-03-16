@@ -1,7 +1,10 @@
 import React from "react";
 import Banner from "../Banner/Banner";
+import BlogNews from "../BlogNews/BlogNews";
 import Discount from "../Discount/Discount";
-import Product from "../Product/Product";
+import Favourite from "../Favourite/Favourite";
+import HowWork from "../HowWork/HowWork";
+
 import Products from "../Products/Products";
 
 const Home = () => {
@@ -10,7 +13,9 @@ const Home = () => {
       <Banner />
       <Discount />
       <Products />
-      <Product />
+      <HowWork />
+      <Favourite />
+      <BlogNews />
     </>
   );
 };

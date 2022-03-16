@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navigation = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg  "
+      className="navbar navbar-expand-lg  fixed-top"
       style={{ backgroundColor: "#F5F5F5" }}
     >
       <div className="container">

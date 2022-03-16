@@ -1,0 +1,21 @@
+.all-card:hover {
+  color: white;
+  background: rgb(197, 183, 55);
+}
+.img {
+  transition: transform 0.4s;
+  /*Animation*/
+
+  /* margin: 0 auto; */
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+}
+.img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
