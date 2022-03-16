@@ -17,7 +17,7 @@ const Discount = () => {
   return (
     <Container className="d-flex text-left mt-5">
       <div
-        className="card card-hover card-hover mb-3"
+        className="card card-hover card-hover mb-3 col-sm-12 col-md-6 col-lg-4"
         style={{ maxWidth: "540px" }}
       >
         <div className="row g-0">
@@ -44,7 +44,10 @@ const Discount = () => {
           </div>
         </div>
       </div>
-      <div className="card card-hover mb-3" style={{ maxWidth: "540px" }}>
+      <div
+        className="card card-hover mb-3 col-sm-12 col-md-6 col-lg-4"
+        style={{ maxWidth: "540px" }}
+      >
         <div className="row g-0">
           <div className="col-md-4">
             <img
@@ -69,7 +72,10 @@ const Discount = () => {
           </div>
         </div>
       </div>
-      <div className="card card-hover mb-3" style={{ maxWidth: "540px" }}>
+      <div
+        className="card card-hover mb-3 col-sm-12 col-md-6 col-lg-4"
+        style={{ maxWidth: "540px" }}
+      >
         <div className="row g-0">
           <div className="col-md-4">
             <img

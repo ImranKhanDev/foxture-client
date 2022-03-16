@@ -3,6 +3,11 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  const style = {
+    color: "#000",
+    fontSize: "20px",
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg  fixed-top"
@@ -10,7 +15,7 @@ const Navigation = () => {
     >
       <div className="container">
         <Link className="navbar-brand" to="/home">
-          Foxture
+          <strong style={{ fontSize: "35px", color: "black" }}>Foxture</strong>
         </Link>
         <button
           className="navbar-toggler"
@@ -28,8 +33,8 @@ const Navigation = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul
-            className="navbar-nav me-auto mb-2 mb-lg-0"
-            style={{ color: "#FCFCFC" }}
+            className="navbar-nav me-auto mb-2 mb-lg-0  text-secondary"
+            style={style}
           >
             <li className="nav-item">
               <Link className="nav-link" to="/home">
@@ -54,7 +59,7 @@ const Navigation = () => {
             </li>
           </ul>
           <form className="d-flex">
-            <button className="btn btn-light" type="submit">
+            <button className="btn btn-secondary" type="submit">
               Login
             </button>
           </form>

@@ -6,14 +6,14 @@ const Product = ({ product }) => {
   const { img, title, review, price } = product;
 
   return (
-    <Container className="text-center justfy-content-center container">
+    <Container className="text-center justify-content-center">
       <Col>
         <Card className=" all-card">
           <Card.Img
             variant="top"
             src={img}
             className="img"
-            style={{ width: "60%", margin: "0 auto" }}
+            style={{ width: "100%", margin: "0 auto" }}
           />
           <Card.Body>
             <Card.Text>{review}</Card.Text>

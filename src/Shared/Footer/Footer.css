@@ -1,0 +1,28 @@
+.container-fluid {
+  background: #f5f5f5;
+}
+.container-fluid ul strong {
+  margin-bottom: 10px;
+}
+.container-fluid ul li {
+  list-style-type: none;
+}
+.container-fluid Link {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+.column li {
+  margin-top: 10px;
+}
+.app .appstore {
+  margin-right: 15px;
+}
+.social ul {
+  display: flex;
+  justify-content: flex-start;
+}
+.social li {
+  list-style-type: none;
+  margin-right: 15px;
+  cursor: pointer;
+}
