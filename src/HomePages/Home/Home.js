@@ -8,7 +8,7 @@ import HowWork from "../HowWork/HowWork";
 import NewsLetter from "../Newsletter/NewsLetter";
 
 import Products from "../Products/Products";
-import Review from "../Review/Review";
+
 
 const Home = () => {
   return (
@@ -21,7 +21,6 @@ const Home = () => {
       <BlogNews />
       {/* <Review /> */}
       <NewsLetter />
-      <Footer />
     </>
   );
 };
