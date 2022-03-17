@@ -6,9 +6,10 @@ import Navigation from "./Shared/Navigation/Navigation";
 import Login from "./HomePages/Login/Login";
 import Register from "./HomePages/Register/Register";
 import Footer from "./Shared/Footer/Footer";
+import AuthProvider from "./Components/Context/AuthProvider";
 function App() {
   return (
-    <div>
+    <AuthProvider>
       <BrowserRouter>
         <Navigation />
         <Switch>
@@ -27,7 +28,7 @@ function App() {
         </Switch>
         <Footer />
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   );
 }
 

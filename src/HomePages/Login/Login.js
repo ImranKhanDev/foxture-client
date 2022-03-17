@@ -1,26 +1,47 @@
 import { Button } from "bootstrap";
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import "./Login.css";
-const googleSignIn = (e) => {
-  e.target.value();
-};
-const handleFormSubmit = (e) => {
-  e.preventDefault();
-};
+
+import useAuth from "../../Components/Hooks/useAuth";
 
 const Login = () => {
+  const [loginData, setLoginData] = useState([]);
+
+  const handleOnBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+  const { user, manualLoginUser, googleSignIn } = useAuth();
+
+  const handleFormSubmit = (e) => {
+    manualLoginUser(loginData?.email, loginData?.password);
+    e.preventDefault();
+  };
   return (
     <div className="my-5 py-5">
       <div className="login">
-        <h1>Login to Web App</h1>
+        <h1>Login to Web App {user?.displayName}</h1>
         <form onSubmit={handleFormSubmit}>
           <p>
-            <input type="text" name="login" placeholder="Username " />
+            <input
+              type="text"
+              onChange={handleOnBlur}
+              name="email"
+              placeholder="Username "
+            />
           </p>
           <p>
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              onChange={handleOnBlur}
+              name="password"
+              placeholder="Password"
+            />
           </p>
           <p className="remember_me">
             <label>

@@ -42,7 +42,10 @@ const Favourite = () => {
 
         <Row xs={12} md={4} sm={6} className="g-4">
           {favouritePD?.map((favProduct) => (
-            <FavProduct favProduct={favProduct}></FavProduct>
+            <FavProduct
+              key={favProduct.img}
+              favProduct={favProduct}
+            ></FavProduct>
           ))}
         </Row>
       </Container>

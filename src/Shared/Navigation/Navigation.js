@@ -1,13 +1,14 @@
 import React from "react";
 import { Nav, Navbar, Container, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../Components/Hooks/useAuth";
 
 const Navigation = () => {
   const style = {
     color: "#000",
     fontSize: "20px",
   };
-
+  const { user, logOut } = useAuth();
   return (
     <nav
       className="navbar navbar-expand-lg  fixed-top"
@@ -59,14 +60,17 @@ const Navigation = () => {
             </li>
           </ul>
           <form className="d-flex justify-content-between">
-            <Link to="/login">
-              {" "}
-              <button className="btn btn-secondary">Login</button>
-            </Link>
-            {/* <Link to="/register">
-              {" "}
-              <button className="btn btn-secondary">Register</button>
-            </Link> */}
+            {!user?.email ? (
+              <Link to="/login">
+                <button className="btn btn-secondary">Login</button>
+              </Link>
+            ) : (
+              <Link to="/register">
+                <button onClick={logOut} className="btn btn-secondary">
+                  Logout || {user.email}
+                </button>
+              </Link>
+            )}
           </form>
         </div>
       </div>
