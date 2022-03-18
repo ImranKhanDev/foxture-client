@@ -7,6 +7,8 @@ import Login from "./HomePages/Login/Login";
 import Register from "./HomePages/Register/Register";
 import Footer from "./Shared/Footer/Footer";
 import AuthProvider from "./Components/Context/AuthProvider";
+import ContactPage from "./Pages/ContactPage/ContactPage";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 function App() {
   return (
     <AuthProvider>
@@ -18,6 +20,12 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/productDetails/:id">
+            <ProductDetails />
+          </Route>
+          <Route exact path="/contact">
+            <ContactPage />
           </Route>
           <Route exact path="/login">
             <Login />

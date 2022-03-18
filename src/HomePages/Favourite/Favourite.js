@@ -8,25 +8,14 @@ import blog4 from "../../images/blog1.png";
 import FavProduct from "./FavProduct/FavProduct";
 const favouritePD = [
   {
+    id: 0,
     img: blog1,
     title: "Stand Sound Silver Box",
     price: "$36.00",
   },
-  {
-    img: blog2,
-    title: "Stand Sound Silver Box",
-    price: "$36.00",
-  },
-  {
-    img: blog3,
-    title: "Stand Sound Silver Box",
-    price: "$76.00",
-  },
-  {
-    img: blog4,
-    title: "Stand Sound Silver Box",
-    price: "$46.00",
-  },
+  { id: 111111, img: blog2, title: "Stand Sound Silver Box", price: "$36.00" },
+  { id: 22, img: blog3, title: "Stand Sound Silver Box", price: "$76.00" },
+  { id: 333, img: blog4, title: "Stand Sound Silver Box", price: "$46.00" },
 ];
 const Favourite = () => {
   return (
@@ -43,7 +32,7 @@ const Favourite = () => {
         <Row xs={12} md={4} sm={6} className="g-4">
           {favouritePD?.map((favProduct) => (
             <FavProduct
-              key={favProduct.img}
+              key={favProduct.id}
               favProduct={favProduct}
             ></FavProduct>
           ))}

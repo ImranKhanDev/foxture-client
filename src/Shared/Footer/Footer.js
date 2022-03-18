@@ -9,10 +9,10 @@ import { SiTwitch } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="container-fluid  py-5 mt-5">
+    <div className="container-fluid  full-container py-5 mt-5">
       <Container>
         <Row>
-          <Col className="column">
+          <Col className="col1">
             <ul>
               <h5>
                 <strong
@@ -21,7 +21,7 @@ const Footer = () => {
                     borderBottom: "3px solid grey",
                   }}
                 >
-                  Customer serverice
+                  Customer service
                 </strong>
               </h5>
 
@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col className="column">
+          <Col className="col1">
             <ul>
               {" "}
               <h5>
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col className="column">
+          <Col className="col1">
             <ul>
               <h5>
                 <strong style={{ borderBottom: "3px solid grey" }}>
@@ -101,7 +101,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col className="column">
+          <Col className="col1">
             <ul>
               <h5>
                 {" "}

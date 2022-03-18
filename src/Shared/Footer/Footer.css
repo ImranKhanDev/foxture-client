@@ -1,17 +1,17 @@
-.container-fluid {
+.full-container {
   background: #f5f5f5;
 }
-.container-fluid ul strong {
+.full-container ul strong {
   margin-bottom: 10px;
 }
-.container-fluid ul li {
+.full-container ul li {
   list-style-type: none;
 }
-.container-fluid Link {
+.full-container Link {
   text-decoration: none;
   color: #f5f5f5;
 }
-.column li {
+.col1 li {
   margin-top: 10px;
 }
 .app .appstore {

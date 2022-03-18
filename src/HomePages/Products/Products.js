@@ -23,7 +23,7 @@ const Products = () => {
 
       <Row xs={12} md={4} sm={6} className="g-4">
         {products?.map((product) => (
-          <Product key={product.img} product={product}></Product>
+          <Product key={product.id} product={product}></Product>
         ))}
       </Row>
     </Container>
