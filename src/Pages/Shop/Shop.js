@@ -93,20 +93,55 @@ const Shop = () => {
             type="none"
             style={{ fontSize: "18px", cursor: "pointer" }}
           >
-            <li className="text-start mb-1">Azuri</li>
-            <li className="text-start mb-1">Apple</li>
-            <li className="text-start mb-1">Panda</li>
-            <li className="text-start mb-1">Laptamia</li>
-            <li className="text-start mb-1">Best Buy</li>
-            <li className="text-start mb-1">Ebay</li>
-            <li className="text-start mb-1">Samsung</li>
-            <li className="text-start mb-1">Quartz</li>
+            <li className="text-start mb-1">i. Azuri</li>
+            <li className="text-start mb-1">ii. Apple</li>
+            <li className="text-start mb-1">iii. Panda</li>
+            <li className="text-start mb-1">iv. Laptamia</li>
+            <li className="text-start mb-1">v. Best Buy</li>
+            <li className="text-start mb-1">vi. Ebay</li>
+            <li className="text-start mb-1">vii. Samsung</li>
+            <li className="text-start mb-1">viii. Quartz</li>
           </ul>
         </Col>
         <Col className="col-md-9 text-center mt-4">
           <Products></Products>
         </Col>
       </Row>
+      {/* pagination under here */}
+      <nav aria-label="Page navigation example">
+        <ul className="pagination justify-content-center mt-5">
+          <li className="page-item ">
+            <a
+              className="page-link"
+              href="/shop"
+              tabindex="-1"
+              aria-disabled="true"
+            >
+              Previous
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/shop">
+              1
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/shop">
+              2
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/shop">
+              3
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/shop">
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </Container>
   );
 };
