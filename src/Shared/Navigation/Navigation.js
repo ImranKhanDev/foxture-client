@@ -48,6 +48,13 @@ const Navigation = () => {
               </Link>
             </li>
 
+            {user.email && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard">
+                  Dashboard
+                </Link>
+              </li>
+            )}
             <li className="nav-item">
               <Link className="nav-link" to="/pages">
                 Pages

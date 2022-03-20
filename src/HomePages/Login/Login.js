@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 
 import useAuth from "../../Components/Hooks/useAuth";
+import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const [loginData, setLoginData] = useState([]);
@@ -18,10 +20,18 @@ const Login = () => {
   };
   const { user, manualLoginUser, googleSignIn } = useAuth();
 
+  // const { location } = useLocation();
+  // const history = useHistory();
+  // const redirect_uri = location?.state?.from || "/dashboard";
+
   const handleFormSubmit = (e) => {
     manualLoginUser(loginData?.email, loginData?.password);
+    // .then((result) => {
+    //   history.push(redirect_uri);
+    // });
     e.preventDefault();
   };
+
   return (
     <div className="my-5 py-5">
       <div className="login">

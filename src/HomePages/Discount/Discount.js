@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Discount.css";
-import {
-  Button,
-  ButtonGroup,
-  Card,
-  CardGroup,
-  Col,
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Card, Col, Container, Row } from "react-bootstrap";
 
 const Discount = () => {
   const [discounts, setDiscounts] = useState([]);
@@ -18,8 +10,7 @@ const Discount = () => {
       .then((res) => res.json())
       .then((data) => setDiscounts(data));
   }, []);
-  // console.log(discounts);
-  // const { img, description } = discount;
+
   return (
     <Container className="d-flex text-left mt-5">
       <Row xs={1} md={3} className="g-4">

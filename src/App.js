@@ -9,6 +9,10 @@ import Footer from "./Shared/Footer/Footer";
 import AuthProvider from "./Components/Context/AuthProvider";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Admin from "./Components/Dashboard/Admin/Admin";
+import AddProduct from "./Components/Dashboard/AddProduct/AddProduct";
+import PrivateRoute from "./Components/Private/PrivateRoute/PrivateRoute";
 function App() {
   return (
     <AuthProvider>
@@ -32,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/register">
             <Register />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
         </Switch>
         <Footer />

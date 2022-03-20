@@ -1,0 +1,15 @@
+.contain {
+  width: 98%;
+}
+.left-dash {
+  background: rgb(248, 241, 241);
+  color: #080808;
+}
+.left-dash ul {
+  list-style: none;
+  cursor: pointer;
+  text-align: left;
+}
+.left-dash li {
+  margin-top: 15px;
+}

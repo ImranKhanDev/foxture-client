@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Col, Row, Container } from "react-bootstrap";
-import { AiFillStar } from "react-icons/ai";
+import { Col, Row, Container, Button } from "react-bootstrap";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import { SiTwitch } from "react-icons/si";
 
 import { BsFacebook, BsYoutube, BsTwitter } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
+import CheckOutForm from "../CheckOutForm/CheckOutForm";
 const ProductDetails = () => {
   const [products, setProducts] = useState([]);
 
@@ -20,15 +21,16 @@ const ProductDetails = () => {
       .then((data) => setProducts(data));
   }, []);
   const details = products.find((detail) => detail?.id == id);
-  console.log(details);
-  console.log(products);
+
+  const [lgShow, setLgShow] = useState(false);
+
   return (
     <Container>
       <Row xs={1} md={2} lg={2} className="g-4 mt-5 d-flex align-items-center">
         <Col>
           <img src={details?.img} alt="" />
         </Col>
-        <Col className="text-start ">
+        <Col className="text-start text-left">
           <div>
             <h2 className="">{details?.title}</h2>
             <h6>
@@ -38,7 +40,7 @@ const ProductDetails = () => {
                 <AiFillStar />
                 <AiFillStar />
                 <AiFillStar />
-                <AiFillStar />
+                <AiOutlineStar />
               </span>{" "}
               ( {details?.review} reviews)
             </h6>
@@ -46,6 +48,9 @@ const ProductDetails = () => {
               {details?.price} <del>$120.00</del>
               <h5 className="muted">Availability :{details?.availability}</h5>
               <h5 className="muted">Brand :{details?.brand}</h5>
+              <Button variant="secondary" onClick={() => setLgShow(true)}>
+                Add to Proceed
+              </Button>
               <Row className="mt-5">
                 <Col>
                   <div className="social ">
@@ -117,6 +122,8 @@ const ProductDetails = () => {
         aspernatur aliquid ducimus deserunt quos. Possimus itaque necessitatibus
         architecto quod officiis.
       </p>
+      {/* Modal  */}
+      <CheckOutForm details={details} setLgShow={setLgShow} lgShow={lgShow} />
     </Container>
   );
 };
