@@ -8,8 +8,11 @@ import { SiTwitch } from "react-icons/si";
 import { BsFacebook, BsYoutube, BsTwitter } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
+
+import useAuth from "../Hooks/useAuth";
 import CheckOutForm from "../CheckOutForm/CheckOutForm";
 const ProductDetails = () => {
+  const { user } = useAuth();
   const [products, setProducts] = useState([]);
 
   const { id } = useParams();
@@ -51,7 +54,7 @@ const ProductDetails = () => {
               <Button variant="secondary" onClick={() => setLgShow(true)}>
                 Add to Proceed
               </Button>
-              <Row className="mt-5">
+              <Row className="mt-5 text-start">
                 <Col>
                   <div className="social ">
                     <ul className="mr-2">
@@ -123,7 +126,33 @@ const ProductDetails = () => {
         architecto quod officiis.
       </p>
       {/* Modal  */}
-      <CheckOutForm details={details} setLgShow={setLgShow} lgShow={lgShow} />
+      <br />
+
+      <br />
+      <h4 className="mt-3">Imran Khan </h4>
+      <h6>
+        <span className="text-warning">
+          {" "}
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+          <AiFillStar />
+          <AiOutlineStar />
+        </span>{" "}
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <br />
+          Dignissimos repellat quos illum ipsam sed in voluptatibus porro!
+          Consectetur, voluptatum iste!
+        </p>
+      </h6>
+
+      <CheckOutForm
+        details={details}
+        user={user}
+        setLgShow={setLgShow}
+        lgShow={lgShow}
+      />
     </Container>
   );
 };

@@ -12,7 +12,7 @@ const Products = () => {
   }, []);
   return (
     <Container>
-      <h2>Best Products </h2>
+      <h2 class>Best Products </h2>
 
       <Row xs={12} md={4} sm={6} className="g-4">
         {products?.map((product) => (

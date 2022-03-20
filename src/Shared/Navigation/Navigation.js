@@ -55,11 +55,7 @@ const Navigation = () => {
                 </Link>
               </li>
             )}
-            <li className="nav-item">
-              <Link className="nav-link" to="/pages">
-                Pages
-              </Link>
-            </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
                 Contact Us

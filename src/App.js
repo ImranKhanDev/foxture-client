@@ -13,6 +13,7 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Admin from "./Components/Dashboard/Admin/Admin";
 import AddProduct from "./Components/Dashboard/AddProduct/AddProduct";
 import PrivateRoute from "./Components/Private/PrivateRoute/PrivateRoute";
+import Shop from "./Pages/Shop/Shop";
 function App() {
   return (
     <AuthProvider>
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/shop">
+            <Shop />
           </Route>
           <Route exact path="/productDetails/:id">
             <ProductDetails />
