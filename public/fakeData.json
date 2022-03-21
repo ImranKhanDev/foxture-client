@@ -1,93 +1,93 @@
-[
-  {
-    "id": 1,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/rt2QmDN/pd-1.png",
-    "review": "32 reviews",
-    "title": "Easy Chair",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Panda"
-  },
+// [
+//   {
+//     "id": 1,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/rt2QmDN/pd-1.png",
+//     "review": "32 reviews",
+//     "title": "Easy Chair",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Panda"
+//   },
 
-  {
-    "id": 2,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/wRYVgbY/pd-2.png",
-    "review": "32 reviews",
-    "title": "Samsung B940 Wireless",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Samsung"
-  },
-  {
-    "id": 3,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/vP2LCTn/pd-3.png",
-    "review": "32 reviews",
-    "title": "Apple Music Setup",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Apple"
-  },
-  {
-    "id": 4,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/VxcCZ7Q/pd-4.png",
-    "review": "32 reviews",
-    "title": "Pendent  roof minimal",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Laptamia"
-  },
-  {
-    "id": 5,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/qpqdjQK/pd-7.png",
-    "review": "32 reviews",
-    "title": "Camera lens clipart",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Best Buy"
-  },
-  {
-    "id": 6,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/YXsmZ9d/pd-8.png",
-    "review": "32 reviews",
-    "title": "Pendent Roof Top Light",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Ebay"
-  },
-  {
-    "id": 7,
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
-    "img": "https://i.ibb.co/b73ZzTB/pd-6.png",
-    "review": "32 reviews",
-    "title": "Life saver watch",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Spider"
-  },
-  {
-    "id": 8,
-    "img": "https://i.ibb.co/rtjv8c2/fav-3.png",
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader ",
-    "review": "32 reviews",
-    "title": "Zoombie Night Light ",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Obelia"
-  },
-  {
-    "id": 9,
-    "img": "https://i.ibb.co/2728h3G/fav1.png",
-    "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader ",
-    "review": "32 reviews",
-    "title": "Triangle Modern Shine",
-    "price": " $55.00",
-    "availability": "In Stock",
-    "brand": "Panda"
-  }
-]
+//   {
+//     "id": 2,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/wRYVgbY/pd-2.png",
+//     "review": "32 reviews",
+//     "title": "Samsung B940 Wireless",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Samsung"
+//   },
+//   {
+//     "id": 3,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/vP2LCTn/pd-3.png",
+//     "review": "32 reviews",
+//     "title": "Apple Music Setup",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Apple"
+//   },
+//   {
+//     "id": 4,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/VxcCZ7Q/pd-4.png",
+//     "review": "32 reviews",
+//     "title": "Pendent  roof minimal",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Laptamia"
+//   },
+//   {
+//     "id": 5,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/qpqdjQK/pd-7.png",
+//     "review": "32 reviews",
+//     "title": "Camera lens clipart",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Best Buy"
+//   },
+//   {
+//     "id": 6,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/YXsmZ9d/pd-8.png",
+//     "review": "32 reviews",
+//     "title": "Pendent Roof Top Light",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Ebay"
+//   },
+//   {
+//     "id": 7,
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, ",
+//     "img": "https://i.ibb.co/b73ZzTB/pd-6.png",
+//     "review": "32 reviews",
+//     "title": "Life saver watch",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Spider"
+//   },
+//   {
+//     "id": 8,
+//     "img": "https://i.ibb.co/rtjv8c2/fav-3.png",
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader ",
+//     "review": "32 reviews",
+//     "title": "Zoombie Night Light ",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Obelia"
+//   },
+//   {
+//     "id": 9,
+//     "img": "https://i.ibb.co/2728h3G/fav1.png",
+//     "description": "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader ",
+//     "review": "32 reviews",
+//     "title": "Triangle Modern Shine",
+//     "price": " $55.00",
+//     "availability": "In Stock",
+//     "brand": "Panda"
+//   }
+// ]

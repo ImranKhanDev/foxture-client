@@ -16,10 +16,10 @@ const ProductDetails = () => {
   const [products, setProducts] = useState([]);
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
-    fetch("/fakeData.json")
+    fetch("http://localhost:5000/products",)
+
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

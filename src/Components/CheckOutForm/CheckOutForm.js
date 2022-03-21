@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Modal } from "react-bootstrap";
 
 import { useForm } from "react-hook-form";
 const CheckOutForm = ({ lgShow, setLgShow, details, user }) => {
   const { register, errors, handleSubmit } = useForm();
+
   const onSubmit = (data) => {
-    console.log("RESULT", data);
+    fetch("http://localhost:5000/order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+
     alert(JSON.stringify(data));
   };
 
   const handleSubmitBtn = () => {
     alert("Your cart procedded successfully !");
   };
+
   return (
     <>
       <Modal
@@ -30,70 +39,48 @@ const CheckOutForm = ({ lgShow, setLgShow, details, user }) => {
             <label>Product Name</label>
             <input
               type="text"
-              disabled
               className="fw-bold"
               defaultValue={details?.title}
               style={{ width: "100%" }}
-              {...register("name")}
+              {...register("productName")}
             />
             <label>Price</label>
             <input
               type="text"
-              disabled
               className="fw-bold"
               defaultValue={details?.price}
               style={{ width: "100%" }}
-              {...register("email", { required: true, maxLength: 100 })}
+              {...register("price")}
             />
             <label>Email</label>
             <input
               type="text"
-              disabled
               className="fw-bold"
               defaultValue={user?.email}
               style={{ width: "100%" }}
-              {...register("Price", {
-                required: true,
-                pattern:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              })}
+              {...register("email")}
             />
             <label>Address</label>
             <input
               type="text"
               className="fw-bold"
               style={{ width: "100%" }}
-              {...register("Price", {
-                required: true,
-                pattern:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              })}
+              {...register("address")}
             />
-            <label>Image URL</label>
+            <label>Delivery Charge</label>
             <input
-              type="text"
+              defaultValue="$120"
               className="fw-bold"
-              disabled
               style={{ width: "100%" }}
-              {...register("charge", {
-                required: true,
-
-                pattern:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              })}
+              {...register("charge")}
             />
             <label>Brand</label>
             <input
               type="text"
-              disabled
               className="fw-bold"
               defaultValue={details?.brand}
               style={{ width: "100%" }}
-              {...register("brand", {
-                required: true,
-                maxLength: 11,
-                minLength: 8,
-              })}
+              {...register("brand")}
             />
 
             <input type="submit" onClick={handleSubmitBtn} />

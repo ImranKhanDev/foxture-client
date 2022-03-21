@@ -3,10 +3,7 @@ import { Container, Row, Col, Form, Badge, ListGroup } from "react-bootstrap";
 import Products from "../../HomePages/Products/Products";
 
 const Shop = () => {
-  //   const [shop, setShop] = useState([]);
-  //   useEffect(() => {
-  //     fetch("/fakeData.json");
-  //   }, []);
+  
   return (
     <Container className="mt-5">
       <div className="p-4 mt-5 bg-secondary">
