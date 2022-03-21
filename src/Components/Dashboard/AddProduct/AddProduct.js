@@ -8,7 +8,8 @@ const AddProduct = () => {
   const { user } = useAuth();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addProduct", {
+    
+    fetch("http://localhost:9000/addProduct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

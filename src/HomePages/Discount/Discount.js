@@ -6,7 +6,7 @@ const Discount = () => {
   const [discounts, setDiscounts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("http://localhost:9000/products")
       .then((res) => res.json())
       .then((data) => setDiscounts(data));
   }, []);

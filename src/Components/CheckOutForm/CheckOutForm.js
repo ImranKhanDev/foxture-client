@@ -3,10 +3,12 @@ import { Modal } from "react-bootstrap";
 
 import { useForm } from "react-hook-form";
 const CheckOutForm = ({ lgShow, setLgShow, details, user }) => {
-  const { register, errors, handleSubmit } = useForm();
+
+  const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/order", {
+
+    fetch("http://localhost:9000/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

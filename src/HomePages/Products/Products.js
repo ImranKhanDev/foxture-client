@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 import Product from "../Product/Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("http://localhost:9000/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
   return (
     <Container>
-      <h2 class>Best Products </h2>
+      <h2 className="text-center">Best Products </h2>
 
       <Row xs={12} md={4} sm={6} className="g-4">
         {products?.map((product) => (

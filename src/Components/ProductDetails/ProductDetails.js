@@ -7,8 +7,6 @@ import { SiTwitch } from "react-icons/si";
 
 import { BsFacebook, BsYoutube, BsTwitter } from "react-icons/bs";
 
-import { Link } from "react-router-dom";
-
 import useAuth from "../Hooks/useAuth";
 import CheckOutForm from "../CheckOutForm/CheckOutForm";
 const ProductDetails = () => {
@@ -18,11 +16,13 @@ const ProductDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:5000/products",)
+
+    fetch("http://localhost:9000/products")
 
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+
   const details = products.find((detail) => detail?.id == id);
 
   const [lgShow, setLgShow] = useState(false);
