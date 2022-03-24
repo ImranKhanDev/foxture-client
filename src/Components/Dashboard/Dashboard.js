@@ -7,7 +7,7 @@ import { Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 import AddProduct from "./AddProduct/AddProduct";
 import Admin from "./Admin/Admin";
-
+import ManegeProducts from "./ManegeProducts/ManegeProducts";
 import "./Dashboard.css";
 import GiveReview from "./GiveReview/GiveReview";
 const Dashboard = () => {
@@ -45,6 +45,18 @@ const Dashboard = () => {
                   textDecoration: "none",
                   fontSize: "22px",
                 }}
+                to={`${url}/manegeProducts`}
+              >
+                Manege Products
+              </Link>
+            </li>
+            <hr />
+            <li>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  fontSize: "22px",
+                }}
                 to={`${url}/addReview`}
               >
                 Give Review
@@ -60,6 +72,9 @@ const Dashboard = () => {
             </Route>
             <Route path={`${path}/addProduct`}>
               <AddProduct />
+            </Route>
+            <Route path={`${path}/manegeProducts`}>
+              <ManegeProducts />
             </Route>
             <Route path={`${path}/addReview`}>
               <GiveReview />
