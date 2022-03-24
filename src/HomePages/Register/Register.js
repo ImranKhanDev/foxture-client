@@ -51,12 +51,7 @@ const Register = () => {
               placeholder="Password"
             />
           </p>
-          <p className="remember_me">
-            <label>
-              <input type="checkbox" name="remember_me" id="remember_me" />
-              Remember me on this computer
-            </label>
-          </p>
+         
           <p className="submit">
             <input type="submit" onClick={handleOnBlur} />
           </p>

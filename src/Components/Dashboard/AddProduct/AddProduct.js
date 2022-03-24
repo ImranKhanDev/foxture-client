@@ -9,7 +9,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     
-    fetch("http://localhost:9000/addProduct", {
+    fetch("https://sleepy-beyond-85979.herokuapp.com/addProduct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

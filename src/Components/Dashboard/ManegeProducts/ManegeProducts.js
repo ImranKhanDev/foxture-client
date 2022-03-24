@@ -7,7 +7,7 @@ const ManegeProducts = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch("http://localhost:9000/orders")
+    fetch("https://sleepy-beyond-85979.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setManegeProducts(data));
   }, []);

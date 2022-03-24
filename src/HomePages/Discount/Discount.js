@@ -6,7 +6,7 @@ const Discount = () => {
   const [discounts, setDiscounts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9000/products")
+    fetch("https://sleepy-beyond-85979.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setDiscounts(data));
   }, []);

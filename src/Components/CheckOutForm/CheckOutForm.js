@@ -8,7 +8,7 @@ const CheckOutForm = ({ lgShow, setLgShow, details, user }) => {
 
   const onSubmit = (data) => {
 
-    fetch("http://localhost:9000/order", {
+    fetch("https://sleepy-beyond-85979.herokuapp.com/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
