@@ -9,7 +9,7 @@ import { SiTwitch } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="container-fluid  full-container py-5 mt-5">
+    <div className="container-fluid  full-container py-5 ">
       <Container>
         <Row>
           <Col className="col1">
