@@ -14,6 +14,7 @@ initialFirebase();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -21,9 +22,35 @@ const useFirebase = () => {
   // register new user
 
   const registerUser = (email, password) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result);
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  //logout user
+
+  const logOut = () => {
+    setIsLoading(true);
+    signOut(auth)
+      .then(() => {
+        setUser("");
+      })
+      .catch((error) => {})
+      .finally(() => setIsLoading(false));
+  };
+
+  // manual login user
+
+  const manualLoginUser = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        setUser(result.user);
       })
       .catch((error) => {
         setError(error.message);
@@ -40,29 +67,6 @@ const useFirebase = () => {
         setUser(error.message);
       });
   };
-
-  //logout user
-
-  const logOut = () => {
-    signOut(auth)
-      .then(() => {
-        setUser("");
-      })
-      .catch((error) => {});
-  };
-
-  // manual login user
-
-  const manualLoginUser = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
-
   // special observer
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -81,6 +85,7 @@ const useFirebase = () => {
     manualLoginUser,
     googleSignIn,
     logOut,
+    isLoading,
   };
 };
 

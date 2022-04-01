@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Button, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Components/Hooks/useAuth";
 import "./Register.css";
 const Register = () => {
-  const { user, registerUser } = useAuth();
+  const { user, registerUser, isLoading } = useAuth();
   const [registerData, setRegisterData] = useState([]);
 
   const handleOnBlur = (e) => {
@@ -25,7 +26,7 @@ const Register = () => {
   return (
     <div className="my-5 py-5">
       <div className="register">
-        <h1>Register to Web App</h1>
+        <h1>Register to Web App</h1>(
         <form onSubmit={handleFormSubmit}>
           <p>
             <input
@@ -51,11 +52,17 @@ const Register = () => {
               placeholder="Password"
             />
           </p>
-         
+
           <p className="submit">
             <input type="submit" onClick={handleOnBlur} />
           </p>
         </form>
+        ){/* {isLoading && <Spinner animation="border" />} */}
+        {user?.email && (
+          <div class="alert alert-primary" role="alert">
+            new user successfully done.
+          </div>
+        )}
       </div>
 
       <div className="login-help">

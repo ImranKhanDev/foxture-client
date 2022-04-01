@@ -20,14 +20,14 @@ const ContactPage = () => {
         <div className="mt-5 text-center text-warning">
           <Row>
             <h1 className="text-dark border-0"> Keep in Touch</h1>
-            <Col className="col-md-6 ">
+            <Col className="col-12 col-md-4 col-lg-6">
               <img
                 style={{ width: "70%", height: "100%" }}
                 src={contact}
                 alt="contact-image"
               />
             </Col>
-            <Col className="col-md-6 ">
+            <Col className="col-12 col-md-4 col-lg-6">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <label>First name</label>
                 <input

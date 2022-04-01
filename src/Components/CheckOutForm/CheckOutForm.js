@@ -16,11 +16,11 @@ const CheckOutForm = ({ lgShow, setLgShow, details, user }) => {
       .then((res) => res.json())
       .then((data) => console.log(data));
 
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
 
   const handleSubmitBtn = () => {
-    alert("Your cart procedded successfully !");
+    alert("Your cart proceded successfully !");
   };
 
   return (
