@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./HomePages/Home/Home";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Navigation from "./Shared/Navigation/Navigation";
+import AppBar from "./Shared/AppBar/AppBar";
 import Login from "./HomePages/Login/Login";
 import Register from "./HomePages/Register/Register";
 import Footer from "./Shared/Footer/Footer";
@@ -14,11 +14,12 @@ import Admin from "./Components/Dashboard/Admin/Admin";
 import AddProduct from "./Components/Dashboard/AddProduct/AddProduct";
 import PrivateRoute from "./Components/Private/PrivateRoute/PrivateRoute";
 import Shop from "./Pages/Shop/Shop";
+
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Navigation />
+        <AppBar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -26,12 +27,14 @@ function App() {
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/shop">
+          <PrivateRoute exact path="/shop">
             <Shop />
-          </Route>
+          </PrivateRoute>
+
           <Route exact path="/productDetails/:id">
             <ProductDetails />
           </Route>
+
           <Route exact path="/contact">
             <ContactPage />
           </Route>

@@ -3,13 +3,13 @@ import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import "./Login.css";
-
 import useAuth from "../../Components/Hooks/useAuth";
-import { useLocation } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 
+// import { useLocation } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 const Login = () => {
   const [loginData, setLoginData] = useState([]);
+  const { user, manualLoginUser, googleSignIn } = useAuth();
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -18,17 +18,14 @@ const Login = () => {
     newLoginData[field] = value;
     setLoginData(newLoginData);
   };
-  const { user, manualLoginUser, googleSignIn } = useAuth();
 
-  // const { location } = useLocation();
+  // const location = useLocation();
   // const history = useHistory();
-  // const redirect_uri = location?.state?.from || "/dashboard";
+  // const redirect_uri = location?.state?.from || "/";
 
   const handleFormSubmit = (e) => {
-    manualLoginUser(loginData?.email, loginData?.password);
-    // .then((result) => {
-    //   history.push(redirect_uri);
-    // });
+    manualLoginUser(loginData?.email, loginData?.password)
+    .then((result) => {});
     e.preventDefault();
   };
 
@@ -53,12 +50,7 @@ const Login = () => {
               placeholder="Password"
             />
           </p>
-          <p className="remember_me">
-            <label>
-              <input type="checkbox" name="remember_me" id="remember_me" />
-              Remember me on this computer
-            </label>
-          </p>
+
           <p className="submit">
             <input type="submit" name="commit" />
           </p>

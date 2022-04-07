@@ -12,20 +12,17 @@ import CheckOutForm from "../CheckOutForm/CheckOutForm";
 const ProductDetails = () => {
   const { user } = useAuth();
   const [products, setProducts] = useState([]);
+  const [lgShow, setLgShow] = useState(false);
 
   const { id } = useParams();
 
   useEffect(() => {
-
     fetch("https://sleepy-beyond-85979.herokuapp.com/products")
-
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
   const details = products.find((detail) => detail?.id == id);
-
-  const [lgShow, setLgShow] = useState(false);
 
   return (
     <Container>
@@ -57,7 +54,7 @@ const ProductDetails = () => {
               <Row className="mt-5 text-start">
                 <Col>
                   <div className="social ">
-                    <ul className="mr-2">
+                    <ul className="">
                       <h5 className="text-start mr-4">Share :</h5>
                       <li>
                         {" "}

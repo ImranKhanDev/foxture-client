@@ -15,7 +15,7 @@ const Register = () => {
     const newRegisterData = { ...registerData };
     newRegisterData[field] = value;
     setRegisterData(newRegisterData);
-    console.log(newRegisterData);
+    // console.log(newRegisterData);
   };
 
   const handleFormSubmit = (e) => {
@@ -26,7 +26,7 @@ const Register = () => {
   return (
     <div className="my-5 py-5">
       <div className="register">
-        <h1>Register to Web App</h1>(
+        <h1>Register to Web App</h1>
         <form onSubmit={handleFormSubmit}>
           <p>
             <input
@@ -57,7 +57,7 @@ const Register = () => {
             <input type="submit" onClick={handleOnBlur} />
           </p>
         </form>
-        ){/* {isLoading && <Spinner animation="border" />} */}
+        {/* {isLoading && <Spinner animation="border" />} */}
         {user?.email && (
           <div class="alert alert-primary" role="alert">
             new user successfully done.

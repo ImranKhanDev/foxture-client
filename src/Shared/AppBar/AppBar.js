@@ -2,13 +2,18 @@ import React from "react";
 import { Nav, Navbar, Container, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../Components/Hooks/useAuth";
-
-const Navigation = () => {
+import swal from "sweetalert";
+const AppBar = () => {
   const style = {
     color: "#000",
     fontSize: "20px",
   };
   const { user, logOut } = useAuth();
+  // console.log(user);
+  const handleSweet = () => {
+    swal("Log Out successfully!");
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg  fixed-top"
@@ -42,13 +47,20 @@ const Navigation = () => {
                 Home
               </Link>
             </li>
-           {
-             user?.email &&  <li className="nav-item">
-             <Link className="nav-link" to="/shop">
-               Shop
-             </Link>
-           </li>
-           }
+            {user?.email && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/shop">
+                  Shop
+                </Link>
+              </li>
+            )}
+            {/* priavate route kaj korle r uporer ta lagbena apadoto  */}
+
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/shop">
+                Shop
+              </Link>
+            </li> */}
 
             {user.email && (
               <li className="nav-item">
@@ -57,6 +69,12 @@ const Navigation = () => {
                 </Link>
               </li>
             )}
+            {/* priavate route kaj korle r uporer ta lagbena apadoto  */}
+            {/* <li className="nav-item">
+              <Link className="nav-link" to="/dashboard">
+                Dashboard
+              </Link>
+            </li> */}
 
             <li className="nav-item">
               <Link className="nav-link" to="/contact">
@@ -67,12 +85,17 @@ const Navigation = () => {
           <form className="d-flex justify-content-between">
             {!user?.email ? (
               <Link to="/login">
-                <button className="btn btn-secondary">Login</button>
+                <button
+                  onClick={() => handleSweet()}
+                  className="btn btn-secondary"
+                >
+                  Login
+                </button>
               </Link>
             ) : (
               <Link to="/register">
                 <button onClick={logOut} className="btn btn-secondary">
-                  Logout || {user.email}
+                  Logout || {user?.email}
                 </button>
               </Link>
             )}
@@ -83,4 +106,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default AppBar;
