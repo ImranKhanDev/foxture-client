@@ -48,8 +48,10 @@ const useFirebase = () => {
   // manual login user
 
   const manualLoginUser = (email, password) => {
+    console.log(email, password);
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        console.log("this si result", result);
         setUser(result.user);
       })
       .catch((error) => {

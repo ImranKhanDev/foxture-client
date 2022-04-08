@@ -31,9 +31,9 @@ function App() {
             <Shop />
           </PrivateRoute>
 
-          <Route exact path="/productDetails/:id">
+          <PrivateRoute exact path="/productDetails/:id">
             <ProductDetails />
-          </Route>
+          </PrivateRoute>
 
           <Route exact path="/contact">
             <ContactPage />

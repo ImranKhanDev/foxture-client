@@ -1,12 +1,10 @@
 import { Button } from "bootstrap";
 import React, { useState } from "react";
 
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Login.css";
 import useAuth from "../../Components/Hooks/useAuth";
 
-// import { useLocation } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 const Login = () => {
   const [loginData, setLoginData] = useState([]);
   const { user, manualLoginUser, googleSignIn } = useAuth();
@@ -19,14 +17,18 @@ const Login = () => {
     setLoginData(newLoginData);
   };
 
-  // const location = useLocation();
-  // const history = useHistory();
-  // const redirect_uri = location?.state?.from || "/";
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location?.state?.from || "/";
 
-  const handleFormSubmit = (e) => {
-    manualLoginUser(loginData?.email, loginData?.password)
-    .then((result) => {});
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    try {
+      await manualLoginUser(loginData?.email, loginData?.password);
+      history.push(redirect_uri);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
